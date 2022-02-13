@@ -1,18 +1,12 @@
 let submitted = false;
 
 $('#email').onchange = () => Validate.email();
-$('#password').onchange = () => Validate.password();
 
 document.forms[0].onsubmit = function() {
-
-	const A = Validate.email(), B = Validate.password();
-
-	if(!A)
+	if(!Validate.email())
 		$('#email').focus();
-	else if(!B)
-		$('#password').focus();
 
-	if(!A || !B || submitted)
+	if(!Validate.email() || submitted)
 		return false;
 
 

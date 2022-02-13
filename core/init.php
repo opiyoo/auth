@@ -17,3 +17,5 @@ const CONFIG = [
 spl_autoload_register(function($class) {
 	require './classes/' . $class . '.php';
 });
+
+require_once 'includes/functions.php';

@@ -1,4 +1,4 @@
-<?php require './backend/join.inc.php'; ?>
+<?php require './backend/forgot.inc.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,16 +9,15 @@
 	<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/fontawesome/css/all.css">
 	<link rel="stylesheet" href="./styles/global.css">
-	<title>Crealli - Register</title>
+	<title>Crealli - Lost password?</title>
 </head>
 <body>
-	
 
 	<div class="col-8 col-sm-7 col-md-6 col-lg-4 mx-auto">
-		<div class="text-center my-3"><i class="fa-solid fa-user-plus fa-2x text-success"></i></div>
+		<div class="text-center my-3"><i class="fa-solid fa-bomb fa-2x text-success"></i></div>
 
 		<div class="form-text mb-2 text-dark">
-			Create an account in under a minute! Enter your details to continue. Have an account? <a href="login.php">Log in</a>
+			Lost your password? Don't fret. Enter the email address associated with your account and we'll send you instructions to reset your password
 		</div>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" novalidate>
 			<div class="form-group mb-2">
@@ -28,14 +27,8 @@
 			</div>
 
 			<div class="form-group mb-2">
-				<label for="password" class="form-label">Password <small class="text-muted">- 5 characters minimum - </small></label>
-				<input type="password" name="password" id="password" class="form-control <?php if($password_e) echo 'is-invalid'; ?>" value="<?php echo $password; ?>">
-				<div class="invalid-feedback"><?php echo $password_e; ?></div>
-			</div>
-
-			<div class="form-group mb-3">
 				<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-				<button type="submit" class="btn btn-sm btn-success col-12">JOIN</button>
+				<button type="submit" class="btn btn-sm btn-success col-12">SUBMIT</button>
 			</div>
 		</form>
 
@@ -47,6 +40,6 @@
 	</div>
 
 <script src="./javascript/main.js"></script>
-<script src="./javascript/join.js"></script>
+<script src="./javascript/forgot.js"></script>
 </body>
 </html>

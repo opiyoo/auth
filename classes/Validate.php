@@ -18,7 +18,7 @@ class Validate {
 		return true;
 	}
 
-	public static function email($msg = 0) {
+	public static function password($msg = 0) {
 		$password = $_POST['password'];
 
 		if('' === $password) {
@@ -27,7 +27,7 @@ class Validate {
 		}
 
 		if(!$msg && strlen($password) < 5) {
-			$GLOBALS['password_e'] = 'Your password is too short'
+			$GLOBALS['password_e'] = 'Your password is too short';
 			return false;
 		}
 
