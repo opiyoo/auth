@@ -1,0 +1,29 @@
+body, .btn {
+	font-size: 90%;
+}
+
+.flex-label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-label a {
+	font-weight: normal !important;
+}
+
+a {
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.btn {
+	padding: .58rem .75rem;
+    font-size: .75rem;
+}
+
+.form-check-label {
+    font-size: .74rem;
+}
+
